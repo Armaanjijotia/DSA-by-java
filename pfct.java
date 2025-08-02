@@ -1,152 +1,118 @@
-// import java.util.*;
-// public class pfct {
+import java.util.Scanner;
 
-      //1.⁠Enter 3 numbers from the user & make a function to print their average.
+public class PracticeFunctions {
 
+    // 1. Enter 3 numbers from the user & print their average.
+    public static float averageOfThree(int a, int b, int c) {
+        float avg = (a + b + c) / 3.0f;
+        System.out.println("Average is: " + avg);
+        return avg;
+    }
 
-//     // public static float sumofnumber(int a,int b,int c){
-//     // float avg = (a+b+c)/3.0f;
-//     // System.out.println("average is "+ avg);
-//     // return avg;
-//     // }
-//     // public static void main(String[] args) {
-//     //     Scanner sc= new Scanner(System.in);
-//     //     System.out.print("enter the val of a :");
-//     //     int a = sc.nextInt();
-//     //     System.out.print("enter the val of b :");
-//     //     int b = sc.nextInt();
-//     //     System.out.print("enter the val of c :");
-//     //     int c = sc.nextInt();
-        
-//     //    sumofnumber(a, b, c);
-//     // }
+    // 2. Print the sum of all odd numbers from 1 to n.
+    public static int sumOfOdds(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 != 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
 
-   //2.⁠ ⁠Write a function to print the sum of all odd numbers from 1 to n.
-    
-//     // public static int sumofodd(int n){
-//     // int sum=0;
-//     // for(int i=1;i<=n;i++){
-//     //     if(i%2!=0){
-//     //         sum=sum+i;
-//     //     }
-//     // }
-//     // return sum;
+    // 3. Return the greater of two numbers.
+    public static int maxOfTwo(int a, int b) {
+        if (a > b) {
+            System.out.println("a is greater.");
+            return a;
+        } else {
+            System.out.println("b is greater.");
+            return b;
+        }
+    }
 
-//     // }
-//     // public static void main(String[] args) {
-//     //     Scanner scanner = new Scanner(System.in);
+    // 4. Calculate the circumference of a circle.
+    public static float circumference(float radius) {
+        float pi = 3.14f;
+        float circumference = 2 * pi * radius;
+        System.out.println("Circumference of the circle: " + circumference);
+        return circumference;
+    }
 
-//     //     // Take input
-//     //     System.out.print("Enter a number (n): ");
-//     //     int n = scanner.nextInt();
+    // 5. Check if a person is eligible to vote.
+    public static boolean isEligibleToVote(int age) {
+        if (age >= 18) {
+            System.out.println("Eligible to vote.");
+            return true;
+        } else {
+            System.out.println("Not eligible to vote.");
+            return false;
+        }
+    }
 
-//     //     // Get and print the result
-//     //     int result = sumofodd(n);
-//     //     System.out.println("Sum of odd numbers from 1 to " + n + " is: " + result);
-//     // }
+    // 6. Infinite loop using do-while.
+    public static void infiniteLoop() {
+        do {
+            System.out.println("This is an infinite loop.");
+        } while (true);
+    }
 
-//3.⁠ ⁠Write a function which takes in 2 numbers and returns the greater of those two.
+    // 7. x raised to the power of n.
+    public static double calculatePower(int x, int n) {
+        return Math.pow(x, n);
+    }
 
+    // 8. Calculate the Greatest Common Divisor (GCD) of two numbers.
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
 
-//     // public static int whoisgreater(int a,int b){
-//     //     if(a>b){
-//     //         System.out.println("a is gretaer ");
-//     //         return a;   
-//     //     }
-//     //     else{
-//     //         System.out.println("b is gretaer ");
-//     //         return b;
-//     //     }
-//     // }
-//     // public static void main(String[] args) {
-//     //     int a=115;
-//     //     int b=20;
-//     //     whoisgreater(a, b);
-//     // }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-//4.⁠ ⁠Write a function that takes in the radius as input and returns the circumference of a circle.
+        // Uncomment to test each function individually:
 
+        // 1. Average of three numbers
+        // System.out.print("Enter three numbers: ");
+        // averageOfThree(sc.nextInt(), sc.nextInt(), sc.nextInt());
 
-//     // public static float circumferencecircle(float  r){
-//     //     float Pi=3.14f;
-//     //     float cir=2* Pi* r;
+        // 2. Sum of odd numbers
+        // System.out.print("Enter a number: ");
+        // int sum = sumOfOdds(sc.nextInt());
+        // System.out.println("Sum of odd numbers: " + sum);
 
-//     //     System.out.println("CIRCUMFERENCE OF THE CIRCLE  " +cir);
-//     //  return cir;
-//     // }
-//     // public static void main(String[] args) {
-//     //     float r=5;
-//     //     circumferencecircle(r);
-        
-//     // }
+        // 3. Greater of two numbers
+        // System.out.print("Enter two numbers: ");
+        // maxOfTwo(sc.nextInt(), sc.nextInt());
 
-//5.⁠ ⁠Write a function that takes in age as input and returns if that person is eligible to vote or not. A person of age > 18 is eligible to vote.
+        // 4. Circumference
+        // System.out.print("Enter radius: ");
+        // circumference(sc.nextFloat());
 
-//     // public static void votereligibleornot(int n){
-//     //     if(n>18){
-//     //         System.out.print("it is eligebale: ");
-//     //     }
-//     //     else{
-//     //          System.out.print("it is not eligebale: ");
-//     //     }
-//     // }
-//     // public static void main(String[] args) {
-//     //     Scanner sc= new Scanner(System.in);
-//     //     System.out.print("enter the age of the voter:  ");
-//     //     int n = sc.nextInt();
-//     //     votereligibleornot(n);
-//     // }
+        // 5. Voting eligibility
+        // System.out.print("Enter age: ");
+        // isEligibleToVote(sc.nextInt());
 
-//6.⁠ ⁠Write an infinite loop using do while condition.
+        // 6. Infinite loop (use with caution!)
+        // infiniteLoop();
 
-// // public static void main(String[] args) {
-// //         do {
-// //             System.out.println("This is an infinite loop.");
-// //         } while(true);
-// //     }
+        // 7. Power function
+        // System.out.print("Enter base and exponent: ");
+        // double result = calculatePower(sc.nextInt(), sc.nextInt());
+        // System.out.println("Result: " + result);
 
-//7.⁠ ⁠Two numbers are entered by the user, x and n. Write a function to find the value of one number raised to the power of another i.e. x".
+        // 8. GCD
+        // System.out.print("Enter two numbers for GCD: ");
+        // int resultGCD = gcd(sc.nextInt(), sc.nextInt());
+        // System.out.println("GCD: " + resultGCD);
 
+        sc.close();
+    }
+}
 
-// // public static double calculatePower(int x, int n) {
-// //         return Math.pow(x, n);  // Uses built-in method to compute x^n
-// //     }
-
-// //     public static void main(String[] args) {
-// //         Scanner sc = new Scanner(System.in);
-
-// //         System.out.print("Enter the number (x): ");
-// //         int x = sc.nextInt();
-
-// //         System.out.print("Enter the power (n): ");
-// //         int n = sc.nextInt();
-
-// //         double result = calculatePower(x, n);
-// //         System.out.println(" raised to the power " + result);
-
-    
-// //      }
-
-// 8.⁠ ⁠Write a function that calculates the Greatest Common Divisor of 2 numbers.
-
-// // public static float gcdno(float a,float b){
-// // while (b != 0) {
-// //             float temp = b;
-// //             b = a % b;
-// //             a = temp;
-// //         }
-// //         return a;
-// // }
-// // public static void main(String[] args) {
-// //     Scanner sc = new Scanner(System.in);
-
-// //         System.out.print("Enter the number (a): ");
-// //         int a = sc.nextInt();
-
-// //         System.out.print("Enter the power (b): ");
-// //         int b = sc.nextInt();
-// //        float gcd =gcdno(a, b);
-// //        System.out.println(gcd);
-// // }
-//     }
 
