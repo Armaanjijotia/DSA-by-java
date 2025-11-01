@@ -8,7 +8,6 @@ class subseqn{
         char currchar=str.charAt(idx);
         //to be
         Subseqn(str, idx+1, newString+currchar);
-
         // not to be
         Subseqn(str, idx+1, newString);
     }

@@ -1,45 +1,41 @@
-import java.util.Scanner;
+import java.util.*;
 
-/**
- * Demonstrates basic use of conditional statements and switch-case in Java.
- */
-public class ConditionalExample {
+public class conditional {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // --- IF-ELSE COMPARISON ---
-        System.out.print("Enter the value for a: ");
+        System.out.print("Enter the element for a: ");
         int a = sc.nextInt();
 
-        System.out.print("Enter the value for b: ");
+        System.out.print("Enter the element for b: ");
         int b = sc.nextInt();
 
-        if (a == b) {
-            System.out.println("a is equal to b");
+        // IF AND ELSE STATEMENT 
+
+       if (a == b) {
+           System.out.println("Equal");
         } else if (a > b) {
             System.out.println("a is greater than b");
         } else {
             System.out.println("a is less than b");
         }
-
-        System.out.println();
-
-        // --- SWITCH CASE EXAMPLE ---
-        System.out.print("Enter a number to compare (1 or 2): ");
-        int compare = sc.nextInt();
-
-        switch (compare) {
-            case 1:
-                System.out.println("You selected option 1: a is lesser");
-                break;
+     
+       // SWITCH CASE 
+       
+       System.out.println("enter compare no.");
+       int compare = sc.nextInt();
+       switch (compare) {
+           case 1:
+           if(compare==1)
+           System.out.println("print a is lesser");
+               break;
             case 2:
-                System.out.println("You selected option 2: a is greater");
-                break;
-            default:
-                System.out.println("Invalid selection.");
-        }
-
-        sc.close(); // Always close your scanner
+           if(compare==2)
+           System.out.println("print a is greater");
+               break;
+           default:
+           System.out.println("no. invalid");
+              
+       }
     }
 }
-

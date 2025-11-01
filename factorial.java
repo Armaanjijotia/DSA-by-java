@@ -5,7 +5,6 @@ public class factorial {
         }
         return n * fact(n - 1); // Recursive case
     }
-
     public static void main(String[] args) {
         int n = 5;
         int result = fact(n);

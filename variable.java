@@ -1,8 +1,4 @@
-/**
- * Demonstrates the use of different variable types in Java.
- */
-public class VariableExample {
-    
+public class variable {
     public static void main(String[] args) {
         
         // Integer variable
@@ -17,10 +13,10 @@ public class VariableExample {
         // Boolean variable
         boolean isPassed = true;
         
-        // String variable (not a primitive type)
+        // String (not a primitive, but widely used)
         String name = "Aryan";
 
-        // Print all variable values
+        // Printing all variables
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("GPA: " + gpa);

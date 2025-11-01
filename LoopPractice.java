@@ -1,53 +1,52 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class LoopPractice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // ------------------ 1. FOR LOOP ------------------
+        // 1st LOOP: FOR LOOP
         System.out.println("FOR LOOP:");
-        for (int i = 0; i < 3; i++) {
-            System.out.println("i = " + i);
+        for (int c = 0; c < 3; c++) {
+            System.out.println(c);
         }
 
-        // ------------------ 2. WHILE LOOP ------------------
+        // 2nd LOOP: WHILE LOOP
         System.out.println("\nWHILE LOOP:");
-        int j = 1;
-        while (j < 4) {
-            System.out.println("j = " + j);
-            j++;
+        int i = 1;
+        while (i < 4) {
+            i++;
+            System.out.println(i);
         }
 
-        // ------------------ 3. DO-WHILE LOOP ------------------
+        // 3rd LOOP: DO-WHILE LOOP
         System.out.println("\nDO-WHILE LOOP:");
-        int k = 0;
+        int a = 0;
         do {
-            System.out.println("k = " + k);
-            k++;
-        } while (k < 4);
+            System.out.println(a);
+            a++;
+        } while (a < 4);
 
-        // ------------------ Q1. Sum of n natural numbers ------------------
-        System.out.println("\nQ1) Sum of n natural numbers");
-        System.out.print("Enter the value of n: ");
-        int n = sc.nextInt();
+        // Q1) Sum of n natural numbers
+        System.out.println("\nQ1) Sum of n natural numbers:");
         int sum = 0;
+        System.out.print("Enter the value for n: ");
+        int n = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            sum += i;
+        for (int j = 1; j <= n; j++) {
+            sum += j;
+        }
+        System.out.println("Sum = " + sum);
+
+        // Q2) Multiplication table of any number
+        System.out.println("\nQ2) Multiplication table:");
+        System.out.print("Enter the value for k: ");
+        int k = sc.nextInt();
+
+        for (int j = 1; j <= 10; j++) {
+            int table = j * k;
+            System.out.println(k + " x " + j + " = " + table);
         }
 
-        System.out.println("Sum of first " + n + " natural numbers is: " + sum);
-
-        // ------------------ Q2. Multiplication Table ------------------
-        System.out.println("\nQ2) Multiplication table");
-        System.out.print("Enter a number to print its multiplication table: ");
-        int num = sc.nextInt();
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " x " + i + " = " + (num * i));
-        }
-
-        sc.close(); // Always good to close the Scanner
+        sc.close();
     }
 }
-
