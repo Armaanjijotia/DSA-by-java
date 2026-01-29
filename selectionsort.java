@@ -9,10 +9,10 @@ public class selectionsort {
 
         for(int i=0;i<arry.length-1;i++){
         for(int j=i+1;j<arry.length;j++){
-            if(arry[i]<arry[j]){
-                int temp=arry[i];
-                arry[i]=arry[j];
-                arry[j]=temp;
+            if(arry[i]>arry[j]){
+                int temp=arry[j];
+                arry[j]=arry[i];
+                arry[i]=temp;
             }
         }
         }

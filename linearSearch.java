@@ -12,7 +12,7 @@ public class linearSearch {
     // Main method to test the code
     public static void main(String[] args) {
         int[] numbers = {10, 20, 30, 40, 50};  // Array to search in
-        int target = 30;                       // Element to search for
+        int target = 3;                       // Element to search for
 
         int result = linearSearchs(numbers, target);
 

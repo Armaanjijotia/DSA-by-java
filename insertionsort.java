@@ -5,7 +5,7 @@ public class insertionsort {
         }
     }
     public static void main(String[] args) {
-        int array[] = {2, 4, 8, 9, 6};
+        int array[] = {2, 4, 8, 9, 9};
         // Insertion Sort
         for (int i = 1; i < array.length; i++) {
             int j = i - 1;
