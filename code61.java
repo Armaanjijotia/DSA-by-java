@@ -1,38 +1,49 @@
 class Solution {
-    public ListNode rotateRight(ListNode head, int k) {
 
-        if (head == null || head.next == null || k == 0)
-            return head;
+    public int length(Node head){
+        int len = 0;
+        Node temp = head;
 
-        // Step 1: find length
-        ListNode temp = head;
-        int length = 1;
-
-        while (temp.next != null) {
+        while(temp != null){
             temp = temp.next;
-            length++;
+            len++;
         }
 
-        // Step 2: make circular
-        temp.next = head;
+        return len;
+    }
 
-        // Step 3: reduce k
-        k = k % length;
+    public Node rotateRight(Node head, int k) {
 
-        // Step 4: find new tail
-        int stepsToNewTail = length - k;
-
-        ListNode newTail = head;
-        for (int i = 1; i < stepsToNewTail; i++) {
-            newTail = newTail.next;
+        if(head == null || head.next == null){
+            return head;
         }
 
-        // Step 5: new head
-        ListNode newHead = newTail.next;
+        int n = length(head);
 
-        // break circle
-        newTail.next = null;
+        k = k % n;
 
-        return newHead;
+        if(k == 0){
+            return head;
+        }
+
+        Node fast = head;
+        Node slow = head;
+
+        for(int i = 0; i < k; i++){
+            fast = fast.next;
+        }
+
+        while(fast.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        Node a = slow.next;
+
+        slow.next = null;
+
+        fast.next = head;
+
+        return a;
     }
 }
